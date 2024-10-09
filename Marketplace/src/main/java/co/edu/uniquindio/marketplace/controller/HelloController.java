@@ -1,4 +1,4 @@
-package co.edu.uniquindio.marketplace;
+package co.edu.uniquindio.marketplace.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
