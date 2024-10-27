@@ -1,4 +1,4 @@
-package co.edu.uniquindio.marketplace.model.builder;
+package co.edu.uniquindio.marketplace.model;
 
 public class Objeto {
     private String nombre;

@@ -1,25 +1,27 @@
 package co.edu.uniquindio.marketplace.mapping.mappers;
 
+import co.edu.uniquindio.marketplace.mapping.dto.ProductoDto;
 import co.edu.uniquindio.marketplace.mapping.dto.VendedorDto;
-import co.edu.uniquindio.marketplace.model.builder.Vendedor;
+import co.edu.uniquindio.marketplace.model.Producto;
+import co.edu.uniquindio.marketplace.model.Vendedor;
 import co.edu.uniquindio.marketplace.service.IMarketplaceMapping;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MarketplaceMapppingImp implements IMarketplaceMapping {
+public class MarketplaceMapppingImpl implements IMarketplaceMapping {
     @Override
     public List<VendedorDto> getVendedoresDto(List<Vendedor> listaVendedores) {
         if(listaVendedores == null){
             return null;
         }
 
-        List<VendedorDto> listaVendedoresDto = new ArrayList<VendedorDto>(listaVendedores.size());
+        List<VendedorDto> vendedoresDto = new ArrayList<>();
         for (Vendedor vendedor : listaVendedores) {
-            listaVendedoresDto.add(vendedorToVendedorDto(vendedor));
+            vendedoresDto.add(vendedorToVendedorDto(vendedor));
         }
 
-        return listaVendedoresDto;
+        return vendedoresDto;
     }
 
     @Override
@@ -29,8 +31,7 @@ public class MarketplaceMapppingImp implements IMarketplaceMapping {
                 vendedor.getApellidos(),
                 vendedor.getCedula(),
                 vendedor.getDireccion(),
-                vendedor.getUsuario(),
-                vendedor.getContrasena());
+                vendedor.getUsuario());
     }
 
     @Override
@@ -41,7 +42,39 @@ public class MarketplaceMapppingImp implements IMarketplaceMapping {
                 .cedula(vendedorDto.cedula())
                 .direccion(vendedorDto.direccion())
                 .usuario(vendedorDto.usuario())
-                .contrasena(vendedorDto.contrasena())
                 .build();
     }
+
+    @Override
+    public List<ProductoDto> getProductosDto(List<Producto> listaProductos) {
+        if(listaProductos == null){
+            return null;
+        }
+        List<ProductoDto> productosDto = new ArrayList<>();
+        for (Producto producto : listaProductos) {
+            productosDto.add(productoToProductoDto(producto));
+        }
+        return productosDto;
+    }
+
+    @Override
+    public ProductoDto productoToProductoDto(Producto producto) {
+        return new ProductoDto(
+                producto.getNombre(),
+                producto.getImagen(),
+                producto.getPrecio(),
+                producto.getEstado());
+    }
+
+    @Override
+    public Producto productoDtoToProducto(ProductoDto productoDto) {
+        return Producto.builder()
+                .nombre(productoDto.nombre())
+                .imagen(productoDto.imagen())
+                .precio(productoDto.precio())
+                .estado(productoDto.estado())
+                .build();
+    }
+
+
 }

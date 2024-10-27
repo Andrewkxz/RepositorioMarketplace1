@@ -1,27 +1,22 @@
-package co.edu.uniquindio.marketplace.model.builder;
+package co.edu.uniquindio.marketplace.model;
 
-public class Vendedor {
+public abstract class Persona {
     private String nombres;
     private String apellidos;
     private String cedula;
     private String direccion;
-    private String usuario;
-    private String contrasena;
+    private Usuario usuario;
 
-    public Vendedor() {
+    public Persona() {
+
     }
 
-    public Vendedor (String nombres, String apellidos, String cedula, String direccion, String usuario, String contrasena) {
+    public Persona(String nombres, String apellidos, String cedula, String direccion, Usuario usuario) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.cedula = cedula;
         this.direccion = direccion;
         this.usuario = usuario;
-        this.contrasena = contrasena;
-    }
-
-    public static VendedorBuilder builder(){
-        return  new VendedorBuilder();
     }
 
     public String getNombres() {
@@ -56,31 +51,22 @@ public class Vendedor {
         this.direccion = direccion;
     }
 
-    public String getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(String usuario) {
+    public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-    }
-
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
     }
 
     @Override
     public String toString() {
-        return "Vendedor{" +
-                "nombres='" + nombres + '\'' +
-                ", apellidos='" + apellidos + '\'' +
+        return "Persona{" +
+                "nombre='" + nombres + '\'' +
+                ", apellido='" + apellidos + '\'' +
                 ", cedula='" + cedula + '\'' +
                 ", direccion='" + direccion + '\'' +
-                ", usuario='" + usuario + '\'' +
-                ", contrasena='" + contrasena + '\'' +
                 '}';
     }
 }
+
