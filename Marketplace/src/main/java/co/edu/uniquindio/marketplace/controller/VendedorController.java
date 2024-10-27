@@ -4,21 +4,19 @@ import co.edu.uniquindio.marketplace.factory.ModelFactory;
 import co.edu.uniquindio.marketplace.mapping.dto.VendedorDto;
 import co.edu.uniquindio.marketplace.service.IVendedorControllerService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class VendedorController implements IVendedorControllerService {
     ModelFactory modelFactory;
+
     public VendedorController() {
         modelFactory = ModelFactory.getInstance();
     }
 
-    public List<VendedorDto> obtenerVendedores() {
-        return modelFactory.obtenerVendedores();
-    }
-
     @Override
     public List<VendedorDto> obtenerVendedoresDto() {
-        return List.of();
+        return modelFactory.obtenerVendedoresDto();
     }
 
     @Override
@@ -28,11 +26,11 @@ public class VendedorController implements IVendedorControllerService {
 
     @Override
     public boolean actualizarVendedor(String cedulaActual, VendedorDto vendedorDto) {
-        return false;
+        return modelFactory.actualizarVendedor(cedulaActual, vendedorDto);
     }
 
     @Override
     public boolean eliminarVendedor(String cedula) {
-        return false;
+        return modelFactory.eliminarVendedor(cedula);
     }
 }

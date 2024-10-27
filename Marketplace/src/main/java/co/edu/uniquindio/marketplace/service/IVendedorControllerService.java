@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface IVendedorControllerService {
     List<VendedorDto> obtenerVendedoresDto();
-    boolean agregarVendedor(VendedorDto vendedorDto);
-    boolean actualizarVendedor(String cedulaActual, VendedorDto vendedorDto);
+    boolean agregarVendedor(VendedorDto vendedor);
+    boolean actualizarVendedor(String cedulaActual, VendedorDto vendedor);
     boolean eliminarVendedor(String cedula);
 
 }
