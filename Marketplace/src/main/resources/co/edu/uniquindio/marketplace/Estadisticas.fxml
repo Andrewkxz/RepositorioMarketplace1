@@ -3,9 +3,9 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -16,24 +16,42 @@
    <children>
       <Pane layoutX="19.0" layoutY="17.0" prefHeight="366.0" prefWidth="563.0" style="-fx-background-color: efefef; -fx-background-radius: 30;">
          <children>
-            <TextField layoutX="282.0" layoutY="21.0" prefHeight="25.0" prefWidth="254.0" style="-fx-background-color: #D4E4F2;" />
-            <Button layoutX="219.0" layoutY="19.0" mnemonicParsing="false" style="-fx-background-color: #D4E4F2;" text="Inicio" textFill="#375a7e" />
+            <TextField layoutX="30.0" layoutY="16.0" prefHeight="26.0" prefWidth="289.0" style="-fx-background-color: #D4E4F2;" />
             <ImageView fitHeight="55.0" fitWidth="66.0" layoutX="-45.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true" />
-            <Pane layoutX="46.0" layoutY="93.0" prefHeight="242.0" prefWidth="479.0" style="-fx-background-color: #D4E4F2;">
+            <Pane layoutX="167.0" layoutY="66.0" prefHeight="286.0" prefWidth="382.0" style="-fx-background-color: #D4E4F2;">
                <children>
-                  <LineChart layoutX="27.0" layoutY="35.0" prefHeight="173.0" prefWidth="174.0" title="Ventas mes de octubre">
-                     <xAxis>
-                        <CategoryAxis side="BOTTOM" />
-                     </xAxis>
-                     <yAxis>
-                        <NumberAxis side="LEFT" />
-                     </yAxis>
-                  </LineChart>
-                  <PieChart id="PieChart" layoutX="246.0" layoutY="35.0" prefHeight="173.0" prefWidth="200.0" title="Productos más vendidos" />
+                  <Pane layoutX="21.0" layoutY="52.0" prefHeight="220.0" prefWidth="341.0" style="-fx-background-color: #D4D7DB;">
+                     <children>
+                        <LineChart layoutX="22.0" layoutY="21.0" prefHeight="179.0" prefWidth="185.0" title="Ventas del mes de octubre">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" />
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis side="LEFT" />
+                           </yAxis>
+                        </LineChart>
+                     </children>
+                  </Pane>
+                  <Text layoutX="21.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ESTADISTICAS" wrappingWidth="101.38932037353516" />
                </children>
             </Pane>
-            <Text fill="#375a7e" layoutX="28.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MARKETPLACE" textAlignment="CENTER" />
-            <Circle fill="#d4e4f2" layoutX="189.0" layoutY="34.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+            <Pane layoutX="21.0" layoutY="66.0" prefHeight="286.0" prefWidth="124.0" style="-fx-background-color: #c8c8c8;">
+               <children>
+                  <ImageView fitHeight="127.0" fitWidth="101.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../Users/brandon/Downloads/All%20the%20Clothes,%20Shoes,%20Bags%20and%20Accessories%20You%20Need%20for%20Winter%202024%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="127.0" fitWidth="171.0" layoutX="20.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../Users/brandon/Downloads/8%20Styling%20Tricks%20We're%20Stealing%20from%20Fashion%20Bloggers%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Circle fill="#d4e4f2" layoutX="520.0" layoutY="35.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
+            <Button layoutX="424.0" layoutY="18.0" minWidth="25.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="25.0" style="-fx-background-color: #D4E4F2;" text="Button" />
+            <Button layoutX="358.0" layoutY="18.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="23.0" style="-fx-background-color: #D4E4F2;" text="Button" />
          </children></Pane>
    </children>
 </AnchorPane>
