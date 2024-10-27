@@ -6,6 +6,4 @@ public record ProductoDto(
         String nombre,
         String imagen,
         double precio,
-        Estado estado)
-{
 }

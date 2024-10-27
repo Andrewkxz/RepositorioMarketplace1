@@ -1,22 +1,27 @@
-package co.edu.uniquindio.marketplace.model;
+package co.edu.uniquindio.marketplace.model.builder;
 
-public abstract class Persona {
+public class Vendedor {
     private String nombres;
     private String apellidos;
     private String cedula;
     private String direccion;
-    private Usuario usuario;
+    private String usuario;
+    private String contrasena;
 
-    public Persona() {
-
+    public Vendedor() {
     }
 
-    public Persona(String nombres, String apellidos, String cedula, String direccion, Usuario usuario) {
+    public Vendedor (String nombres, String apellidos, String cedula, String direccion, String usuario, String contrasena) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.cedula = cedula;
         this.direccion = direccion;
         this.usuario = usuario;
+        this.contrasena = contrasena;
+    }
+
+    public static VendedorBuilder builder(){
+        return  new VendedorBuilder();
     }
 
     public String getNombres() {
@@ -51,23 +56,31 @@ public abstract class Persona {
         this.direccion = direccion;
     }
 
-    public Usuario getUsuario() {
+    public String getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(String usuario) {
         this.usuario = usuario;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     @Override
     public String toString() {
-        return "Persona{" +
-                "nombre='" + nombres + '\'' +
-                ", apellido='" + apellidos + '\'' +
+        return "Vendedor{" +
+                "nombres='" + nombres + '\'' +
+                ", apellidos='" + apellidos + '\'' +
                 ", cedula='" + cedula + '\'' +
                 ", direccion='" + direccion + '\'' +
+                ", usuario='" + usuario + '\'' +
+                ", contrasena='" + contrasena + '\'' +
                 '}';
     }
 }
-
-

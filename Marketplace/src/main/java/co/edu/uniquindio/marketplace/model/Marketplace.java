@@ -82,14 +82,6 @@ public class Marketplace implements ICrudVendedor {
     }
     //------------------------------- CRUD VENDEDOR -----------------------
 
-    public String mostrarEstadisticasVendedor(String cedula) {
-        for(Vendedor vendedor : listVendedores){
-            if(vendedor.getCedula().equals(cedula)){
-                return vendedor.obtenerEstadisticas();
-            }
-        }
-        return "Vendedor no encontrado";
-    }
 
     public String getNombre() {
         return nombre;

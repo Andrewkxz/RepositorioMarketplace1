@@ -10,7 +10,6 @@ module co.edu.uniquindio.marketplace {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
-    requires java.desktop;
 
     opens co.edu.uniquindio.marketplace to javafx.fxml;
     exports co.edu.uniquindio.marketplace;
