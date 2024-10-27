@@ -6,7 +6,6 @@
 <?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -30,16 +29,11 @@
                         <NumberAxis side="LEFT" />
                      </yAxis>
                   </LineChart>
-                  <PieChart layoutX="246.0" layoutY="35.0" prefHeight="173.0" prefWidth="200.0" title="Productos más vendidos" />
+                  <PieChart id="PieChart" layoutX="246.0" layoutY="35.0" prefHeight="173.0" prefWidth="200.0" title="Productos más vendidos" />
                </children>
             </Pane>
             <Text fill="#375a7e" layoutX="28.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MARKETPLACE" textAlignment="CENTER" />
             <Circle fill="#d4e4f2" layoutX="189.0" layoutY="34.0" radius="20.0" stroke="WHITE" strokeType="INSIDE" />
-            <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="175.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../Users/brandon/Downloads/dgfdb-removebg-preview.png" />
-               </image>
-            </ImageView>
          </children></Pane>
    </children>
 </AnchorPane>
